@@ -278,7 +278,6 @@ class TimelineCard extends HTMLElement {
     if (this.refreshTimer) clearInterval(this.refreshTimer);
 
     this.refreshTimer = setInterval(() => {
-      console.debug('TimelineCard Auto-Refresh');
       this.refreshInBackground();
     }, this.refreshInterval * 1000);
   }

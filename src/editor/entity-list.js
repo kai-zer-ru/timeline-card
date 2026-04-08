@@ -122,12 +122,6 @@ class TimelineCardEntityList extends LitElement {
   _onEntityPicked(ev) {
     const pickedValue = ev.detail?.value;
     this._newEntityId = this._extractEntityId(pickedValue);
-    console.debug('[Timeline Card] ha-selector add entity', {
-      type: ev?.type,
-      rawValue: pickedValue,
-      extractedEntityId: this._newEntityId,
-      detail: ev?.detail,
-    });
   }
 
   _addEntity() {
@@ -148,13 +142,6 @@ class TimelineCardEntityList extends LitElement {
   _onEntityReplaced(index, ev) {
     const selectorValue = ev.detail?.value;
     const id = this._extractEntityId(selectorValue);
-    console.debug('[Timeline Card] ha-selector replace entity', {
-      index,
-      type: ev?.type,
-      rawValue: selectorValue,
-      extractedEntityId: id,
-      detail: ev?.detail,
-    });
     if (!id) return;
 
     const list = [...this.entities];

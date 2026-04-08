@@ -555,16 +555,6 @@ class TimelineCardGeneralSettings extends LitElement {
       ev?.target?.__value ??
       ev?.target?.configValue ??
       '';
-    // Debug info for HA selector regressions across frontend versions.
-    console.debug('[Timeline Card] ha-selector event', {
-      key,
-      type: ev?.type,
-      eventValue,
-      targetValue: ev?.target?.value,
-      detailValue: ev?.detail?.value,
-      target: ev?.target?.tagName,
-      detail: ev?.detail,
-    });
     this._onSelectChange(key, eventValue, keepEmpty, fallbackValue);
   }
 
