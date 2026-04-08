@@ -27,12 +27,12 @@ class TimelineCardEntityList extends LitElement {
       <div class="tc-section">
         <div class="tc-entities-list">
           <div class="tc-entities-header">
-            <div class="tc-entities-title">Сущности</div>
+            <div class="tc-entities-title">Entities</div>
           </div>
 
           ${entities.length === 0
             ? html`<div style="font-size: 13px; opacity: 0.7;">
-                Сущности еще не настроены.
+                No entities configured yet.
               </div>`
             : entities.map((e, idx) => this._renderEntityRow(e, idx))}
 
@@ -54,14 +54,13 @@ class TimelineCardEntityList extends LitElement {
               @click=${this._addEntity}
               ?disabled=${!this._newEntityId}
             >
-              Добавить
+              Add
             </button>
           </div>
 
           <div class="tc-muted">
-            Сущности сначала добавляются как обычные записи
-            <code>entity:</code>. Детальную настройку можно сделать позже в
-            редакторе сущности.
+            Entities are added as plain <code>entity:</code> entries first. You
+            can customise them in the entity editor later.
           </div>
         </div>
       </div>
@@ -85,7 +84,7 @@ class TimelineCardEntityList extends LitElement {
         <div class="tc-entity-actions">
           <button
             class="tc-icon-button"
-            title="Редактировать сущность"
+            title="Edit entity options"
             @click=${() => this._editEntity(index)}
           >
             <ha-icon icon="mdi:pencil"></ha-icon>
@@ -93,7 +92,7 @@ class TimelineCardEntityList extends LitElement {
 
           <button
             class="tc-icon-button"
-            title="Удалить сущность"
+            title="Remove entity"
             @click=${() => this._removeEntity(index)}
           >
             <ha-icon icon="mdi:delete"></ha-icon>

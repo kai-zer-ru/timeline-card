@@ -78,15 +78,15 @@ class TimelineCardEditor extends LitElement {
       </style>
       <div class="tc-editor-root">
         <div class="tc-header">
-          <div class="tc-header-title">Карточка таймлайна</div>
+          <div class="tc-header-title">Timeline Card</div>
         </div>
 
         <div class="tc-section">
           <button class="tc-row-button" @click=${this._openCardSettings}>
             <div class="tc-row-button-label">
-              <span class="tc-row-button-title">Общие настройки</span>
+              <span class="tc-row-button-title">General settings</span>
               <span class="tc-row-button-sub">
-                Настройка общего поведения и внешнего вида таймлайна.
+                Configure global behaviour and layout of the timeline.
               </span>
             </div>
             <span>›</span>
@@ -113,12 +113,12 @@ class TimelineCardEditor extends LitElement {
         <div class="tc-header">
           <button
             class="tc-icon-button"
-            title="Назад"
+            title="Back"
             @click=${() => this._goTo('main')}
           >
             <ha-icon icon="mdi:arrow-left"></ha-icon>
           </button>
-          <div class="tc-header-title">Настройки карточки</div>
+          <div class="tc-header-title">Card settings</div>
         </div>
 
         <timeline-card-general-settings
@@ -144,12 +144,12 @@ class TimelineCardEditor extends LitElement {
         <div class="tc-header">
           <button
             class="tc-icon-button"
-            title="Назад"
+            title="Back"
             @click=${() => this._goTo('main')}
           >
             <ha-icon icon="mdi:arrow-left"></ha-icon>
           </button>
-          <div class="tc-header-title">Настройки сущности</div>
+          <div class="tc-header-title">Entity settings</div>
         </div>
 
         <timeline-card-entity-editor
